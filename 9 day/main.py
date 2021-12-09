@@ -67,6 +67,13 @@ def flood_fill(x, y):
     global arr
     global seen
 
+    if x < 0 or y < 0:
+        return 0
+
+    if x >= len(arr) or y >= len(arr[x]):
+        return 0
+        
+
     if arr[x][y] == 1 and not seen[x][y]:
         seen[x][y] = True
         try:
